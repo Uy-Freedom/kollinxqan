@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ug" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>قوللىنىشچان ياردەمچى</title>
+    <style>
+        body {
+            width: 280px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 12px;
+            background-color: #f7f9fa;
+            color: #333;
+            direction: rtl;
+            text-align: right;
+        }
+        h2 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        .section {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .section h3 {
+            font-size: 13px;
+            margin: 0 0 8px 0;
+            color: #2980b9;
+        }
+        button {
+            width: 100%;
+            padding: 7px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-bottom: 5px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        input[type="checkbox"] {
+            margin-left: 8px;
+        }
+        #speedResult {
+            font-size: 12px;
+            color: #e67e22;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <h2>قوللىنىشچان ياردەمچى</h2>
+
+    <!-- تور سۈرئىتىنى ئۆلچىگۈچ -->
+    <div class="section">
+        <h3>تور سۈرئىتىنى ئۆلچىگۈچ</h3>
+        <button id="checkSpeedBtn">سۈرئەتنى تەكشۈرۈش</button>
+        <div id="speedResult">نەتىجىسى بۇ يەردە كۆرسىتىلىدۇ</div>
+    </div>
+
+    <!-- ئېلان ۋە مەزمۇن چەكلەش -->
+    <div class="section">
+        <h3>بەت قوغداش ۋە چەكلەش</h3>
+        <label><input type="checkbox" id="blockAds"> ئېلانلارنى چەكلەش</label>
+        <label><input type="checkbox" id="blockMedia"> سۈرەت ۋە ۋىديولارنى چەكلەش</label>
+        <label><input type="checkbox" id="blockNSFW"> ناشايان رەسىم/مەزمۇنلارنى چەكلەش</label>
+    </div>
+
+    <!-- كۆرسەتكۈچ ئارقىلىق تەرجىمە قىلىش -->
+    <div class="section">
+        <h3>ئالاھىدە تەرجىمان</h3>
+        <button id="toggleTranslator">تەرجىمە ھالىتىنى قوزغىتىش</button>
+        <p style="font-size: 11px; color: #7f8c8d; margin: 5px 0 0 0;">(قوزغىتىлгаندىن كېيىن تور بەتتىكى تېكىستنى باسسىڭىز ئۇيغۇرچىغا ئۆزگىرىدۇ)</p>
+    </div>
+
+    <!-- تېز چۈشۈرۈش قۇرالى -->
+    <div class="section">
+        <h3>تېز چۈشۈرۈش</h3>
+        <input type="text" id="downloadUrl" placeholder="چۈشۈرىدىغان ئادرېس (URL)" style="width: 100%; box-sizing: border-box; padding: 5px; font-size: 11px; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 3px;">
+        <button id="quickDownloadBtn">فايىلنى چۈشۈرۈش</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
